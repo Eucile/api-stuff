@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const mbxClient = require('@mapbox/mapbox-sdk');
+const mbxStyles = require('@mapbox/mapbox-sdk/services/styles');
+const mbxTilesets = require('@mapbox/mapbox-sdk/services/tilesets');
 
 module.exports = {
   entry: './src/main.js',

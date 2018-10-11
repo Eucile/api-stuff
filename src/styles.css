@@ -15,16 +15,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.title, .anime-info {
-  display: flex;
-  justify-content: space-around;
-  padding: 2em;
-}
-
-.synopsis {
-  padding: 2em;
-}
-
-#poster {
-  display: block;
-}
+/* 
+#mapid {
+  height: 180px;
+} */

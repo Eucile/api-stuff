@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 
-
-
 function quoter(){
   const searches = ["author/william%20gibson", "author/bruce+sterling", "title/snow+crash", "title/shockwave+rider", "title/transmetropolitan", "author/richard+k.+morgan", "author/philip+k.+dick"];
   var search = searches[Math.floor(Math.random() * searches.length)];
@@ -24,18 +22,15 @@ function quoter(){
   });
 }
 function randint(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 function rando() {
-  console.log("rando is running");
-  var randyrandom = randint(10000, 60000)
-  console.log(randyrandom);
-  setTimeout(function(){quoter(); rando()}, randyrandom)
+  var randyrandom = randint(10000, 60000);
+  setTimeout(function(){quoter(); rando();}, randyrandom);
 }
 
 $(document).ready(function() {
-  quoter()
-  rando()
-
+  quoter();
+  rando();
 
 });
