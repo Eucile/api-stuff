@@ -11,8 +11,10 @@
 </head>
 <body>
   <div class="container">
+    <div class="fuck">
+      <input type="text" placeholder="">
+    </div>
     <div class="genre-input">
-      <h4>Enter a book genre:</h4>
       <button id="genre-btn" type="button" name="button">Click for Quotes...</button>
     </div>
     <div class="genre-output">
@@ -34,10 +36,10 @@
       }
       function sadnessChanger() {
         var randyrandom = randint(5000, 10000);
-        setTimeout(function(){sadsadsad = sadnessFinder(); mymap.panTo(sadsadsad); sadnessChanger();}, randyrandom);
-        console.log(sadsadsad);
+        setTimeout(function(){sadsadsad = sadnessFinder(); mymap.panTo(sadsadsad, "animate"); sadnessChanger();}, randyrandom);
+        // console.log(sadsadsad);
       }
-      console.log(sadsadsad);
+      // console.log(sadsadsad);
       var mymap = L.map('mapid').setView(sadsadsad, 10);
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -46,6 +48,14 @@
         accessToken: 'pk.eyJ1Ijoic3dhbXBjIiwiYSI6ImNqbjB3MGRsbDIxem4zcG8yNHNyN2QxM2oifQ.i7wDYN5QgTD0msM66Dx7eQ'
       }).addTo(mymap);
       sadnessChanger()
+      // console.log(mymap);
+  </script>
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
+  <script>
+    SC.initialize({
+      client_id: 'YOUR_CLIENT_ID',
+      redirect_uri: 'http://example.com/callback'
+    });
   </script>
 </div>
 </body>

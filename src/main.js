@@ -3,6 +3,16 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
+var SC = require('soundcloud');
+
+SC.initialize({
+  client_id: 'YOUR_CLIENT_ID',
+  redirect_uri: 'http://example.com/callback'
+});
+
+SC.get('/user/183/tracks').then(function(tracks){
+  alert('Latest track: ' + tracks[0].title);
+});
 
 function quoter(){
   const searches = ["author/william%20gibson", "author/bruce+sterling", "title/snow+crash", "title/shockwave+rider", "title/transmetropolitan", "author/richard+k.+morgan", "author/philip+k.+dick"];
@@ -16,8 +26,6 @@ function quoter(){
       var glorft = result.quotes[Math.floor(Math.random() * result.quotes.length)];
       $('.genre-output h1').text(glorft.quote);
       $('.author').text(glorft.author);
-      // $('#poster').attr("src", result.data[randomIndex].attributes.posterImage.medium);
-      // $('.synopsis').text(result.data[randomIndex].attributes.synopsis);
     }
   });
 }
